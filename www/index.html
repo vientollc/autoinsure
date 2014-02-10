@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+          <title>AutoInsure</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="apple-mobile-web-app-capable" content="yes">
+          <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+          <link href="css/codiqa.ext.min.css" rel="stylesheet">
+          <link href="css/jquery.mobile.theme-1.3.1.min.css" rel="stylesheet">
+          <link href="css/viento.css" rel="stylesheet">
+          <link href="css/jquery.mobile.structure-1.3.1.min.css" rel="stylesheet">
+        
+          <script src="js/jquery-1.9.1.min.js"></script>
+          <script src="js/jquery.mobile-1.3.1.min.js"></script>
+          
+        <script type="text/javascript" src="js/index.js"></script>
+          <script src="https://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+          <script src="js/autoinsure.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-control-title="Home" data-theme="g" id="home">
+          <div data-theme="g" data-role="header" data-position="fixed">
+              <h3>
+                  AutoInsure
+              </h3>
+          </div>
+          <div data-role="content">
+              <h2>
+                  Login
+              </h2>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="l_uname" placeholder="username" value="" type="text">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="l_pword" placeholder="password" value="" type="password">
+              </div>
+              <input id="loginBtn" type="submit" data-theme="f" value="Login">
+              <a data-role="button" data-inline="true" data-theme="h" href="#register">
+                  Register
+              </a>
+              <a data-role="button" data-inline="true" href="#reset">
+                  Lost Password
+              </a>
+              <div id="l_resp" data-controltype="textblock">
+                  ...
+              </div>
+          </div>
+          <div data-theme="g" data-role="footer" data-position="fixed">
+              <h3>
+                  ©2013, Prepaygo Technologies
+              </h3>
+          </div>
+      </div>
+      <div data-role="page" data-control-title="Register" data-theme="g" id="register">
+          <div data-theme="g" data-role="header" data-position="fixed">
+              <a data-role="button" data-theme="f" href="#home" class="ui-btn-left">
+                  Back
+              </a>
+              <h3>
+                  AutoInsure
+              </h3>
+          </div>
+          <div data-role="content">
+              <h2>
+                  Register
+              </h2>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="reg_uname" placeholder="username" value="" type="text">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="reg_pword" placeholder="password" value="" type="password">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="reg_pword_2" placeholder="password confirmation" value=""
+                  type="password">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="reg_phone" placeholder="phone number" value="" type="tel">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="reg_email" placeholder="email address" value="" type="email">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="reg_fullname" placeholder="fullname" value="" type="text">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="reg_address" placeholder="address" value="" type="text">
+              </div>
+              <input id="regBtn" type="submit" data-theme="f" value="Register">
+              <div id="reg_resp" data-controltype="textblock">
+                  <p>
+                      <b>
+                          ...
+                      </b>
+                  </p>
+              </div>
+          </div>
+          <div data-theme="g" data-role="footer" data-position="fixed">
+              <h3>
+                  ©2013, Prepaygo Technologies
+              </h3>
+          </div>
+      </div>
+      <div data-role="page" data-control-title="Reset" data-theme="g" id="reset">
+          <div data-theme="g" data-role="header" data-position="fixed">
+              <a data-role="button" data-theme="f" href="#home" class="ui-btn-left">
+                  Back
+              </a>
+              <h3>
+                  AutoInsure
+              </h3>
+          </div>
+          <div data-role="content">
+              <h2>
+                  Password Reset
+              </h2>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="r_email" placeholder="email address" value="" type="email">
+              </div>
+              <input id="resetBtn" type="submit" value="Reset Password">
+              <div id="r_resp" data-controltype="textblock">
+                  <p>
+                      <b>
+                          ...
+                      </b>
+                  </p>
+              </div>
+          </div>
+          <div data-theme="g" data-role="footer" data-position="fixed">
+              <h3>
+                  ©2013, Prepaygo Technologies
+              </h3>
+          </div>
+      </div>
+      <div data-role="page" data-control-title="Landing" data-theme="g" id="landing">
+          <div data-theme="g" data-role="header" data-position="fixed">
+              <h3>
+                  AutoInsure
+              </h3>
+          </div>
+          <div data-role="content">
+              <a data-role="button" data-theme="b" href="#newVehicle">
+                  New Vehicle
+              </a>
+              <ul id="vehiclesList" data-role="listview" data-divider-theme="a" data-inset="true">
+                  <li data-role="list-divider" role="heading">
+                      Vehicles
+                  </li>
+              </ul>
+          </div>
+          <div data-theme="g" data-role="footer" data-position="fixed">
+              <h3>
+                  ©2013, Prepaygo Technologies
+              </h3>
+          </div>
+      </div>
+      <div data-role="page" data-control-title="New Vehicle" data-theme="g"
+      id="newVehicle">
+          <div data-theme="g" data-role="header" data-position="fixed">
+              <a data-role="button" data-theme="f" href="#landing" class="ui-btn-left">
+                  Back
+              </a>
+              <h3>
+                  AutoInsure
+              </h3>
+          </div>
+          <div data-role="content">
+              <h2>
+                  New Vehicle
+              </h2>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="v_reg" placeholder="vehicle registration number" value=""
+                  type="text">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <input name="" id="v_owner" placeholder="policy holder" value="" type="text">
+              </div>
+              <div data-role="fieldcontain" data-controltype="selectmenu">
+                  <label for="v_make">
+                      Vehicle Make
+                  </label>
+                  <select id="v_make" name="" data-theme="h">
+                      <option value="option1">
+                          Option 1
+                      </option>
+                  </select>
+              </div>
+              <div data-role="fieldcontain" data-controltype="selectmenu">
+                  <label for="v_type">
+                      Vehicle Type
+                  </label>
+                  <select id="v_type" name="" data-theme="h">
+                      <option value="option1">
+                          Option 1
+                      </option>
+                  </select>
+              </div>
+              <input id="newCar" type="submit" data-theme="f" value="Add">
+              <div id="vresp" data-controltype="textblock">
+                  <p>
+                      <b>
+                          ...
+                      </b>
+                  </p>
+              </div>
+          </div>
+          <div data-theme="g" data-role="footer" data-position="fixed">
+              <h3>
+                  © 2013, Prepaygo Technologies
+              </h3>
+          </div>
+      </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

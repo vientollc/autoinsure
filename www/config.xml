@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.vientollc.autoinsure" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>AutoInsure</name>
+    <description>
+        Buy Third-Party Insurance via Mobile Phone
+    </description>
+    <author email="rjohn@vientollc.com" href="http://cordova.io">
+        Robert John
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+</widget>
